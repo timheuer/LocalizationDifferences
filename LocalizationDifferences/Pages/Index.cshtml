@@ -1,0 +1,17 @@
+﻿@page
+@inject Microsoft.AspNetCore.Mvc.Localization.IHtmlLocalizer<UIStrings> Localize
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div>
+        String 1: @Localize["TestString1"]
+        <br/>
+        String 2: @Localize["TestString2"]
+    </div>
+</div>

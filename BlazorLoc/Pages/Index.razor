@@ -1,0 +1,20 @@
+﻿@page "/"
+@inject Microsoft.AspNetCore.Mvc.Localization.IHtmlLocalizer<UIStrings> Localize
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<div>The following should be localized</div>
+<div>
+    Test String 1: @Localize["TestString1"]
+    <br/>
+    Test String 2: @Localize["TestString2"]
+</div>
+<div>
+    This fails in Blazor Server using the documented ASPNET Core method so you have to add `.Value`
+</div>
+<div>
+    Test String 1: @Localize["TestString1"].Value
+    <br />
+    Test String 2: @Localize["TestString2"].Value
+</div>
